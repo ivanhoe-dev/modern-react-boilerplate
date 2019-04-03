@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
+body{
+    background-color:#1abc9c;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+}
+
+.nav-item{
+    margin: 0px 20px;
+}
