@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getDependencyList } from '../../../actions/about';
 
-const About = ({ dependencyList, filterDependencyList }) => (
+const About = ({
+    dependencyList, filterDependencyList,
+}) => (
     <div className="jumbotron">
         <h4>Frameworks included in the boilerplate</h4>
         <input type="text" className="form-control" placeholder="Search" onChange={event => filterDependencyList(event.target.value)} />
@@ -20,7 +22,9 @@ About.propTypes = {
     filterDependencyList: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({ dependencyList: state.dependencyList });
+const mapStateToProps = state => ({
+    dependencyList: state.dependencyList,
+});
 
 const mapDispatchToProps = dispatch => ({
     filterDependencyList: keywords => dispatch(getDependencyList(keywords)),
