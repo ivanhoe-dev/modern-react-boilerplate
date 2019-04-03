@@ -2,7 +2,7 @@
 
 A scalable and ready-to-use boilerplate for modern react web development
 
-##Start
+## Start
 
 ```
 npm install
@@ -10,10 +10,10 @@ npm start
 ```
 
 
-##Architecture
+## Architecture
 ![](https://github.com/ivanhoe-dev/modern-react-boilerplate/blob/master/architecture.png?raw=true)
 
-##Dependencies
+## Dependencies
 - React
 - Redux
 - Webpack
