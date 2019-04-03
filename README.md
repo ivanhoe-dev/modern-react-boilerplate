@@ -18,8 +18,10 @@ npm start
 - Redux
 - Webpack
 - React Router
+- React i18next
 - Sass
 - Babel
 - Eslint (With airbnb eslint)
 - Webpack Dev Server
 - Browsersync
+- Redux Devtools Extension (Please also download chrome Redux devtools to use)
