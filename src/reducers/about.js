@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { GET_DEPENDENCY_LIST } from '../actions/about';
+import { GET_DEPENDENCY_LIST, RECEIVE_POSTS } from '../actions/about';
 
 const defaultDependencyList = [
     'React',
@@ -28,4 +28,14 @@ const dependencyList = (state = defaultDependencyList, action) => {
     }
 };
 
-export default combineReducers({ dependencyList });
+const posts = (state = [], action) => {
+    switch (action.type) {
+    case RECEIVE_POSTS: {
+        return action.posts;
+    }
+    default:
+        return state;
+    }
+};
+
+export default combineReducers({ dependencyList, posts });
