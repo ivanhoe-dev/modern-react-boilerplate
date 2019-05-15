@@ -19,6 +19,7 @@ npm start
 - Webpack
 - React Router
 - React i18next
+- Axios
 - Sass
 - Babel
 - Eslint (With airbnb eslint)
