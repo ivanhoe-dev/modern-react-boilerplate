@@ -8,7 +8,20 @@ A scalable and ready-to-use boilerplate for modern react web development
 npm install
 npm start
 ```
+## Build
 
+```
+npm install
+npm build
+```
+
+## Build And Start PROD Server
+
+```
+npm install
+npm start-prod
+```
+The application will be run on localhost:3001
 
 ## Architecture
 ![](https://github.com/ivanhoe-dev/modern-react-boilerplate/blob/master/architecture.png?raw=true)
@@ -18,8 +31,10 @@ npm start
 - Redux
 - Webpack
 - React Router
+- i18next
 - Sass
 - Babel
 - Eslint (With airbnb eslint)
 - Webpack Dev Server
 - Browsersync
+- Express
