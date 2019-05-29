@@ -5,7 +5,7 @@ import '@babel/polyfill';
 // React Dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // Redux Dependencies
 import { createStore, applyMiddleware } from 'redux';

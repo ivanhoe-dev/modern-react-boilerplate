@@ -1,6 +1,3 @@
-const Fibers = require('fibers');
-const Sass = require('sass');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -9,6 +6,8 @@ module.exports = {
         './src/app.js', // React Root Component
     ],
     output: {
+        path: `${__dirname}/dist`,
+        publicPath: '/',
         filename: 'bundle.[hash:8].js',
     },
     module: {
@@ -75,8 +74,6 @@ module.exports = {
                 {
                     loader: 'sass-loader',
                     options: {
-                        implementation: Sass, // Dart Sass
-                        fiber: Fibers, // Synchronous compilation (x2 speed)
                         sourceMap: true,
                     },
                 }],
@@ -84,23 +81,6 @@ module.exports = {
         ],
     },
     plugins: [
-        new BrowserSyncPlugin(
-            {
-                host: 'localhost',
-                port: 3000,
-                proxy: 'http://localhost:9000/',
-                reload: false,
-                online: true,
-                tunnel: true,
-            },
-        ),
         new HtmlWebpackPlugin({ template: 'index.html' }),
     ],
-    devServer: {
-        hot: true,
-        open: false,
-        watchContentBase: true,
-        contentBase: './',
-        port: 9000,
-    },
 };
