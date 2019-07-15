@@ -5,7 +5,7 @@ import '@babel/polyfill';
 // React Dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // Redux Dependencies
 import { createStore, applyMiddleware } from 'redux';
@@ -28,7 +28,6 @@ const store = createStore(
     composeWithDevTools(applyMiddleware(thunk, logger)),
 );
 
-const Router = process.env.NODE_ENV === 'production' ? BrowserRouter : HashRouter;
 ReactDOM.render((
     <Router>
         <Provider store={store}>
